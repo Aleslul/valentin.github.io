@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es el primero creo</title>
+    <style>
+        #videoContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999; /* Asegura que el video aparezca encima de otros elementos */
+        }
+    </style>
+</head>
+<body>
+    <audio src="/music/Pixel.mp3" autoplay loop></audio>
+    
+    <p>Felcidiades, has encontrado un Easter Egg</p>
+
+    <p>Los Easter Eggss son como secretos pero que no sirven ni mrda</p>
+
+    <p>como Dina Boluarte pero mas escondido</p>
+
+    <p>Este es el primero o algo asi, los demas estan mas escondidos</p>
+
+    <p>Ahora que lo pienso no es tan divertido si no te dan nada. si me mandas cap de todos los easter eggs que hay te doy un lapiz de la sipan</p>
+
+    <p>aveces tienes que ser paciente o disfrutar un poco de la musica</p>
+
+    <p>por cierto, este temazo se llama crotolamo</p>
+
+    <p>Encuentralos a Todos!</p>
+
+    <button onclick="location.href='/juego/1.html'">Bai bai</button>
+
+    <video id="explosionVideo" autoplay loop muted controls style="display: none;">
+        <source src="/videos/explosion.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        setTimeout(function() {
+            // Obtener el contenedor del video y mostrarlo
+            const videoContainer = document.getElementById("videoContainer");
+            videoContainer.style.display = "block";
+            
+            // Reproducir el video
+            const explosionVideo = document.getElementById("explosionVideo");
+            explosionVideo.play();
+        }, 200); // Mostrar el video después de 2 segundos
+    </script>
+</body>
+</html>

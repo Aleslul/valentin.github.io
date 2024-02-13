@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLAS VVS Q HAY</title>
+</head>
+
+<body>
+
+    <!-- TEENNNN PIEDAAAAAAAAAAAAAA Y DIMEEEEE PQQQQQQQQQQQQQQQQQQQQQQQQQQ -->
+    <div class="contenedor">
+        <p>bueno esta cosa es aburrida asi q... quieres jugar un juego?</p>
+
+        <button id="yesBtn" onclick="location.href='/juego/prelude.html'">Si alv</button>
+        <Button id="noBtn">No fuck u</Button>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(/images/Blue_Jeans_escritor.jpg);
+            background-size: cover;
+        }
+
+        .contenedor {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+        }
+
+        p {
+            color: red;
+            font-size: 3rem;
+            padding: 15%;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 0.75em;
+        }
+
+        #yesbtn {
+            transform: translate(-100%, 0);
+        }
+
+        #nobtn {
+            position: absolute;
+        }
+    </style>
+
+    <script>
+        let docTitle = document.title;
+        window.addEventListener("blur", () => {
+            document.title = "VUELVEEEEEEEEEEEEEEEEEEEE";
+        })
+        window.addEventListener("focus", () => {
+            document.title = docTitle;
+        })
+
+        const noBtn = document.querySelector('#noBtn');
+
+        noBtn.addEventListener('mouseover', function () {
+            const randomX = parseInt(Math.random() * 400);
+            const randomY = parseInt(Math.random() * 400);
+            noBtn.style.setProperty('top', randomY + '%');
+            noBtn.style.setProperty('left', randomX + '%');
+            noBtn.style.setProperty('transform', `translate(-${randomX}%, -${randomY}%)`);
+        })
+    </script>
+</body>
+
+</html>

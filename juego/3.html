@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clickea el gris</title>
+<style>
+    .boton {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #boton1{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        font-size: 1rem;
+    }
+
+    #boton2 {
+        width: 80px;
+        height: 80px;
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 200px;
+    }
+
+
+</style>
+</head>
+<body>
+
+    <audio src="/music/Dummy.mp3" autoplay loop></audio>
+
+    <p>CLICKEA EL BOTON CELESTE</p>
+
+    <button onclick="location.href='/juego/4.html'" class="boton" id="boton1">Clickea aca</button>
+    <button onclick="location.href='/juego/easter-egss/e3.html'" class="boton" id="boton2">...</button>
+
+    <script>
+        const botones = document.querySelectorAll(".boton");
+
+        // Función para mover un botón aleatoriamente
+        function moverBoton(boton) {
+            const windowHeight = window.innerHeight;
+            const windowWidth = window.innerWidth;
+            const botonWidth = boton.offsetWidth;
+            const botonHeight = boton.offsetHeight;
+
+            const nuevoX = Math.random() * (windowWidth - botonWidth);
+            const nuevoY = Math.random() * (windowHeight - botonHeight);
+
+            boton.style.left = nuevoX + "px";
+            boton.style.top = nuevoY + "px";
+        }
+
+        // Mover los botones cada 1 segundo
+        setInterval(function() {
+            botones.forEach(function(boton) {
+                moverBoton(boton);
+            });
+        }, 600);
+
+
+    </script>
+</body>
+</html>

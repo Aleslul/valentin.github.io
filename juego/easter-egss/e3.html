@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descansa...</title>
+</head>
+
+<body>
+    <audio src="/music/Undertale.mp3" autoplay loop></audio>
+
+    <video autoplay="autoplay" loop="loop" id="video_background" muted />
+    <source src="/videos/descansa-aqui.mp4" type="video/mp4" />
+    </video />
+    <div class="container">
+        <span class="name">Tómate un descanso</span>
+        <button onclick="location.href='/juego/3.html'">Me quiero ir</button>
+    </div>
+
+    <style>
+        #video_background {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            overflow: hidden;
+        }
+
+        #video_pattern {
+            background: #fff;
+            position: fixed;
+            opacity: 0.8;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .container {
+            align-items: center;
+            justify-content: cen;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            margin: 300px 600px;
+        }
+
+        .name {
+            font-size: 4rem;
+            color: #f0f0f0;
+        }
+
+        button {
+            margin-top: 50px;
+            border: none;
+            width: 200px;
+            border-radius: 10px;
+            height: 50px;
+        }
+    </style>
+
+    <script>
+        const mensajes = [
+            { mensaje: "Felicidades por llegar hasta aquí, toma una flor -> 🌹", tiempo: 10000 },
+            { mensaje: "Te ha gustado la cancion? A mi si", tiempo: 20000 },
+            { mensaje: "*Escuchar esto te llena de determinacion*", tiempo: 30000 },
+            { mensaje: "Sigues aqui? quiza debas esperar un poco mas...", tiempo: 40000 },
+            { mensaje: "how do you feel today?", tiempo: 50000 },
+            { mensaje: "...", tiempo: 60000 },
+            { mensaje: ".......", tiempo: 65000 },
+            { mensaje: "Te quiero, Fab.", tiempo: 70000 }
+        ];
+
+        function mostrarMensajeConDelay(mensaje, tiempo) {
+            setTimeout(function () {
+                alert(mensaje);
+            }, tiempo);
+        }
+
+        // Establecer los temporizadores para cada mensaje
+        for (let i = 0; i < mensajes.length; i++) {
+            mostrarMensajeConDelay(mensajes[i].mensaje, mensajes[i].tiempo);
+        }
+
+    </script>
+</body>
+
+</html>

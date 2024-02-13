@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nsifjnasdkgjnasdjg</title>
+<style>
+    body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff; /* Color de fondo inicial */
+        transition: background-color 0.5s; /* Transición suave al cambiar de color */
+    }
+
+    .boton {
+        display: none; /* Ocultar botones inicialmente */
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body onclick="cambiarFondoYBoton()">
+
+    <audio src="/music/ooo.mp3" autoplay loop></audio>
+    <script>
+        let fondoActual = 0; // Variable para mantener el estado del fondo actual
+
+        function cambiarFondoYBoton() {
+            const coloresFondo = ["#000000", "aqua"]; // Colores de fondo alternativos
+            const botones = document.querySelectorAll(".boton");
+
+            // Cambiar color de fondo
+            document.body.style.backgroundColor = coloresFondo[fondoActual];
+
+            // Mostrar el botón correspondiente
+            botones[fondoActual].style.display = "block";
+
+            // Ocultar el botón anterior
+            const botonAnterior = (fondoActual === 0) ? 1 : 0;
+            botones[botonAnterior].style.display = "none";
+
+            // Actualizar el estado del fondo actual para el próximo clic
+            fondoActual = (fondoActual === 0) ? 1 : 0;
+        }
+    </script>
+
+    <!-- Botones -->
+    <button onclick="location.href='/juego/5.html'" class="boton" style="background-color: #ffffff; color: #000000;">Siguiente Pagina</button>
+    <button onclick="location.href='/juego/easter-egss/e4.html'" class="boton" style="background-color: #000000; color: #ffffff;">encontraste algo...</button>
+</body>
+</html>

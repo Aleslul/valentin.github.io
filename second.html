@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estas leyendo esto?</title>
+</head>
+
+<body>
+
+    <!-- TODO Vennnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn y cuentame laaaaa verdadaadadadadadada -->
+
+    <main>
+        <div class="contenedor">
+            <p>Ola vv, quieres q te compre un gloss?</p>
+            <!--             <img src="/images/gloss.webp" alt="q pendejo tu internet de movistar JASJASJASJSASAJSAJSAJ">
+-->
+            <button id="noBtn">Si, soy una aprovechada</button>
+            <button id="yesBtn" onclick="location.href='./third.html'">No, cuida tu platita</button>
+        </div>
+    </main>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(/images/gloss.webp);
+            background-size: cover;
+        }
+
+        .contenedor {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+        }
+
+        p {
+            font-size: 2.5rem;
+            padding: 15%;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 0.75em;
+        }
+
+        #yesbtn {
+            transform: translate(-100%, 0);
+        }
+
+        #nobtn {
+            position: absolute;
+        }
+    </style>
+
+    <script>
+        let docTitle = document.title;
+        window.addEventListener("blur", () => {
+            document.title = "Vente pa' aca";
+        })
+        window.addEventListener("focus", () => {
+            document.title = docTitle;
+        })
+
+        const noBtn = document.querySelector('#noBtn');
+
+        noBtn.addEventListener('mouseover', function () {
+            const randomX = parseInt(Math.random() * 300);
+            const randomY = parseInt(Math.random() * 300);
+            noBtn.style.setProperty('top', randomY + '%');
+            noBtn.style.setProperty('left', randomX + '%');
+            noBtn.style.setProperty('transform', `translate(-${randomX}%, -${randomY}%)`);
+        })
+    </script>
+</body>
+
+</html>

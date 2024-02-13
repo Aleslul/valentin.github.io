@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te juro que ya no me drogo</title>
+    <style>
+        .espacio {
+            width: 10px;
+            height: 10000px;
+        }
+
+        p{
+            font-size: 3rem;
+        }
+
+        #boton {
+            display: none; /* Ocultar el botón inicialmente */
+            font-size: 3rem;
+            cursor: pointer;
+            width: 300px;
+            height: auto;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Baja</p>
+    <div class="espacio"></div>
+    <audio id="miAudio" src="/music/bromita.mp3" controls></audio>
+    <button id="boton" onclick="location.href = '/juego/4.html'">JAJAJAJAJAJAJAJ MEJOR SIGUE</button>
+
+    <script>
+        const miAudio = document.getElementById("miAudio");
+        const boton = document.getElementById("boton");
+
+        miAudio.addEventListener("ended", function() {
+            // Mostrar el botón cuando termina la reproducción del audio
+            boton.style.display = "block";
+        });
+    </script>
+</body>
+</html>
